@@ -1,0 +1,11 @@
+{
+  "_commit": "45bf284",
+  "_src_path": "/home/cancelas/Proyectos/MeshHarmes",
+  "project_name": "LocaLens",
+  "project_description": "Pedestrian Mobility Intelligence, Commercial Location Analysis & Opening Hours Optimization",
+  "project_slug": "localens",
+  "project_author_name": "cacelass",
+  "project_author_email": "",
+  "python_version": "3.12",
+  "project_version": "0.1.0"
+}
