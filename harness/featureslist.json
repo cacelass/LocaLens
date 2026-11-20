@@ -190,6 +190,260 @@
       "started": "2026-08-04",
       "review_rounds": 0,
       "closed": "2026-08-04"
+    },
+    {
+      "id": "DATA-GATE",
+      "title": "Data availability gate",
+      "description": "Verify real mobility data exists before ML. Investigate providers, resolution, legal access.",
+      "acceptance_criteria": [
+        "provider comparison",
+        "resolution report",
+        "legal access",
+        "costs",
+        "fallback strategy",
+        "init.sh en verde"
+      ],
+      "status": "pending",
+      "depends_on": []
+    },
+    {
+      "id": "PHASE-0",
+      "title": "Phase 0: Feasibility and data research",
+      "description": "Provider comparison, data availability, Vigo open-data inventory, MVP data-source decision.",
+      "acceptance_criteria": [
+        "provider comparison",
+        "data availability report",
+        "vigo open data",
+        "MVP data source",
+        "init.sh en verde"
+      ],
+      "status": "pending",
+      "depends_on": []
+    },
+    {
+      "id": "PHASE-1",
+      "title": "Phase 1: Data foundation",
+      "description": "Ingestion, schemas, validation, storage, geospatial normalization, H3 indexing.",
+      "acceptance_criteria": [
+        "ingestion arch",
+        "schemas",
+        "validation",
+        "storage",
+        "H3 indexing",
+        "reproducible pipeline",
+        "init.sh en verde"
+      ],
+      "status": "pending",
+      "depends_on": [
+        "PHASE-0"
+      ]
+    },
+    {
+      "id": "PHASE-2",
+      "title": "Phase 2: Mobility intelligence",
+      "description": "Temporal analytics, geographic aggregation, mobility viz, comparative analysis.",
+      "acceptance_criteria": [
+        "temporal analytics",
+        "geo aggregation",
+        "viz",
+        "comparative analysis",
+        "init.sh en verde"
+      ],
+      "status": "pending",
+      "depends_on": [
+        "PHASE-1"
+      ]
+    },
+    {
+      "id": "PHASE-3",
+      "title": "Phase 3: Machine learning",
+      "description": "Forecasting baselines, feature engineering, LightGBM, walk-forward validation, prediction API.",
+      "acceptance_criteria": [
+        "baselines",
+        "feature engineering",
+        "LightGBM",
+        "walk-forward",
+        "error analysis",
+        "outperform baseline",
+        "init.sh en verde"
+      ],
+      "status": "pending",
+      "depends_on": [
+        "PHASE-2"
+      ]
+    },
+    {
+      "id": "PHASE-4",
+      "title": "Phase 4: Commercial intelligence",
+      "description": "Competitor analysis, location scoring, category weights, explainability, comparison.",
+      "acceptance_criteria": [
+        "competitor analysis",
+        "location scoring",
+        "category weights",
+        "explainability",
+        "compare locations",
+        "init.sh en verde"
+      ],
+      "status": "pending",
+      "depends_on": [
+        "PHASE-3"
+      ]
+    },
+    {
+      "id": "PHASE-5",
+      "title": "Phase 5: Opening-hours optimization",
+      "description": "MILP formulation, OR-Tools, constraints, scenario simulator, sensitivity.",
+      "acceptance_criteria": [
+        "MILP",
+        "OR-Tools",
+        "constraints",
+        "scenario sim",
+        "sensitivity",
+        "feasible schedules",
+        "init.sh en verde"
+      ],
+      "status": "pending",
+      "depends_on": [
+        "PHASE-4"
+      ]
+    },
+    {
+      "id": "PHASE-6",
+      "title": "Phase 6: Product integration",
+      "description": "FastAPI, dashboard, interactive map, model outputs, optimization interface, docs, deploy.",
+      "acceptance_criteria": [
+        "FastAPI",
+        "dashboard",
+        "map",
+        "optimization interface",
+        "docs",
+        "deploy",
+        "end-to-end journey",
+        "init.sh en verde"
+      ],
+      "status": "pending",
+      "depends_on": [
+        "PHASE-5"
+      ]
+    },
+    {
+      "id": "MVP-001",
+      "title": "MVP: Vigo mobility + location + opening hours",
+      "description": "End-to-end: mobility analytics, location scoring, opening hours optimization for Vigo.",
+      "acceptance_criteria": [
+        "mobility explorer",
+        "location analyzer",
+        "opening hours optimizer",
+        "end-to-end",
+        "init.sh en verde"
+      ],
+      "status": "pending",
+      "depends_on": [
+        "PHASE-4"
+      ]
+    },
+    {
+      "id": "MOD-01",
+      "title": "Module 01: Data ingestion",
+      "description": "Connectors for mobility, geospatial, weather, demographic, contextual data.",
+      "acceptance_criteria": [
+        "mobility connector",
+        "geo connector",
+        "weather connector",
+        "validation",
+        "provenance",
+        "init.sh en verde"
+      ],
+      "status": "pending",
+      "depends_on": []
+    },
+    {
+      "id": "MOD-02",
+      "title": "Module 02: Data quality and validation",
+      "description": "Validation, semantic categories (pedestrian count vs device activity), provenance.",
+      "acceptance_criteria": [
+        "validation",
+        "semantic categories",
+        "quality metadata",
+        "init.sh en verde"
+      ],
+      "status": "pending",
+      "depends_on": []
+    },
+    {
+      "id": "MOD-03",
+      "title": "Module 03: Geospatial engine",
+      "description": "H3 indexing, spatial joins, street network, spatial features.",
+      "acceptance_criteria": [
+        "H3",
+        "spatial joins",
+        "buffers",
+        "street network",
+        "spatial features",
+        "init.sh en verde"
+      ],
+      "status": "pending",
+      "depends_on": []
+    },
+    {
+      "id": "MOD-04",
+      "title": "Module 04: Pedestrian mobility analytics",
+      "description": "Core metrics, temporal analysis, visualization.",
+      "acceptance_criteria": [
+        "core metrics",
+        "temporal analysis",
+        "heatmaps",
+        "profiles",
+        "init.sh en verde"
+      ],
+      "status": "pending",
+      "depends_on": []
+    },
+    {
+      "id": "MOD-05",
+      "title": "Module 05: Mobility forecasting engine",
+      "description": "Forecasting models, features, validation, uncertainty.",
+      "acceptance_criteria": [
+        "baselines",
+        "ML models",
+        "feature engineering",
+        "walk-forward",
+        "uncertainty",
+        "init.sh en verde"
+      ],
+      "status": "pending",
+      "depends_on": []
+    },
+    {
+      "id": "MOD-07",
+      "title": "Module 07: Commercial location intelligence",
+      "description": "Location scoring, competition, accessibility, explainability.",
+      "acceptance_criteria": [
+        "location score",
+        "competition",
+        "accessibility",
+        "explainability",
+        "category weights",
+        "init.sh en verde"
+      ],
+      "status": "pending",
+      "depends_on": []
+    },
+    {
+      "id": "MOD-09",
+      "title": "Module 09: Opening hours optimizer",
+      "description": "MILP optimization, constraints, scenario simulator, sensitivity.",
+      "acceptance_criteria": [
+        "MILP",
+        "OR-Tools",
+        "constraints",
+        "scenario sim",
+        "sensitivity",
+        "feasible schedules",
+        "init.sh en verde"
+      ],
+      "status": "pending",
+      "depends_on": []
     }
   ]
 }
